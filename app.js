@@ -11,6 +11,13 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
+const corsOptions = {
+  origin: 'http://localhost:4200', // หรือวาง origin ของเว็บแอป Angular ของคุณที่นี่
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
