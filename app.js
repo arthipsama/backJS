@@ -4,7 +4,7 @@ const app = express();
 const roomRouter = require('./room'); 
 
 const corsOptions = {
-  origin: 'http://localhost:4200',
+  origin: '*',
   optionsSuccessStatus: 200,
 };
 
